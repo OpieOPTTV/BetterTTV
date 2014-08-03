@@ -385,7 +385,7 @@ exports.rethrow = function rethrow(err, filename, lineno, str){
 require.register("debug", function(exports, require, module){
   module.exports = {
     log: function(string) {
-        if(window.console && console.log && bttv.settings.get('consoleLog') === true) console.log("BTTV: " + string);
+        if(window.console && console.log && bttv.settings.get('consoleLog') === true) console.log("OpieOPTTV: " + string);
     }
 };
   
@@ -503,72 +503,11 @@ require.register("keycodes", function(exports, require, module){
 require.register("legacy-tags", function(exports, require, module){
   module.exports = function (data) {
     return {
-        //Developers and Supporters
-        "night": { mod: true, tagType: "broadcaster", tagName: "<span style='color:#FFD700;'>Creator</span>", color: "#000;text-shadow: 0 0 10px #FFD700" },
-        //Donations
-        "gspwar": { mod: false, tagType: "admin", tagName: "EH?" },
-        "nightmare": { mod: false, tagType: "broadcaster", tagName: "MLG" },
-        "sour": { mod: false, tagType: "brown", tagName: "<span style='color:#FFE600;'>Saucy</span>", color: data.color+";text-shadow: 0 0 10px #FFD700" },
-        "yorkyyork": { mod: false, tagType: "broadcaster", tagName: "Nerd" },
-        "striker035": { mod: true, tagType: "admin", tagName: "MotherLover" },
-        "dogs": { mod: true, tagType: "orange", tagName: "Smelly", nickname: "Dog" },
-        "jruxdev": { mod: true, tagType: "bot", tagName: "MuttonChops" },
-        "totally_cereal": { mod: true, tagType: "staff", tagName: "Fruity" },
-        "virtz": { mod: true, tagType: "staff", tagName: "Perv" },
-        "unleashedbeast": { mod: true, tagType: "admin", tagName: "<span style='color:black;'>Surface</span>" },
-        "kona": { mod: true, tagType: "broadcaster", tagName: "KK" },
-        "norfolk": { mod: true, tagType: "broadcaster", tagName: "Creamy" },
-        "leftyben": { mod: true, tagType: "lefty", tagName: "&nbsp;" },
-        "maximusloopus": { mod: true, tagType: "admin", tagName: "<span style='color:black;'>Hero</span>" },
-        "nokz": { mod: true, tagType: "staff", tagName: "N47" },
-        "blindfolded": { mod: true, tagType: "broadcaster", tagName: "iLag" },
-        "jjag72": { mod: true, tagType: "admin", tagName: "Jag" },
-        "snorlaxitive": { mod: true, tagType: "purple", tagName: "King" },
-        "excalibur": { mod: true, tagType: "staff", tagName: "Boss" },
-        "chez_plastic": { mod: true, tagType: "staff", tagName: "Frenchy" },
-        "frontiersman72": { mod: true, tagType: "admin", tagName: "TMC" },
-        "dckay14": { mod: true, tagType: "admin", tagName: "Ginger" },
-        "boogie_yellow": { mod: true, tagType: "orange", tagName: "Yellow" },
-        "harksa": { mod: true, tagType: "orange", tagName: "Feet" },
-        "lltherocksaysll": { mod: true, tagType: "broadcaster", tagName: "BossKey" },
-        "melissa_loves_everyone": { mod: true, tagType: "purple", tagName: "Chubby", nickname: "Bunny" },
-        "redvaloroso": { mod: true, tagType: "broadcaster", tagName: "Dio" },
-        "slapage": { mod: true, tagType: "bot", tagName: "I aM" },
-        "deano2518": { mod: true, tagType: "orange", tagName: "<span style='color:black;'>WWFC</span>" },
-        "eternal_nightmare": { mod: true, tagType: "broadcaster", tagName: "Spencer", nickname: "Nickiforek" },
-        "iivii_beauty": { mod: true, tagType: "purple", tagName: "Crave" },
-        "theefrenzy": { mod: true, tagType: "staff", tagName: "Handsome" },
-        "gennousuke69": { mod: true, tagType: "admin", tagName: "Evil" },
-        "zebbazombies": { mod: true, tagType: "moderator", tagName: "Hugs" },
-        "nobama12345": { mod: true, tagType: "broadcaster", tagName: "Señor" },
-        "uleet": { mod: true, tagType: "moderator", tagName: "Taco" },
-        "mrimjustaminorthreat": { mod: true, tagType: "staff", tagName: "<span style='color:pink;'>Major</span>", nickname: "mrimjustamajorthreat" },
-        "sournothardcore": { mod: true, tagType: "brown", tagName: "<span style='color:#FFE600 !important;'>Saucy</span>", color: data.color+";text-shadow: 0 0 10px #FFD700" },
-        //People
-        "whitesammy": { mod: false, color: "white;text-shadow: 0 0 2px #000" },
-        "mac027": { mod: true, tagType: "admin", tagName: "Hacks" },
-        "vaughnwhiskey": { mod: true, tagType: "admin", tagName: "Bacon" },
-        "socaldesigner": { mod: true, tagType: "broadcaster", tagName: "Legend" },
-        "perfectorzy": { mod: true, tagType: "moderator", tagName: "Jabroni Ave" },
-        "pantallideth1": { mod: true, tagType: "staff", tagName: "Windmill" },
-        "mmmjc": { mod: true, tagType: "admin", tagName: "m&m" },
-        "hawkeyye": { mod: true, tagType: "broadcaster", tagName: "EnVy", nickname: "Hawkeye" },
-        "the_chopsticks": { mod: true, tagType: "admin", tagName: "oZn" },
-        "bacon_donut": { mod: true, tagType: "bacon", tagName: "&#8203;", nickname: "Donut" },
-        "tacos": { mod: true, tagType: "taco", tagName: "&#8203;" },
-        "sauce": { mod: true, tagType: "purple", tagName: "Drippin' Dat" },
-        "thejokko": { mod: true, tagType: "purple", tagName: "Swede" },
-        "missmiarose": { mod: true, tagType: "admin", tagName: "Lovely" },
-        //Xmas
-        "r3lapse": { mod: true, tagType: "staff", tagName: "Kershaw" },
-        "im_tony_": { mod: true, tagType: "admin", tagName: "oZn" },
-        "tips_": { mod: true, tagType: "staff", tagName: "241" },
-        "papa_dot": { mod: true, tagType: "moderator", tagName: "v8" },
-        "1danny1032": { mod: true, tagType: "admin", tagName: "1Bar" },
-        "cvagts": { mod: true, tagType: "staff", tagName: "SRL" },
-        "thesabe": { mod: true, tagType: "orange", tagName: "<span style='color:blue;'>Sabey</span>" },
-        "kerviel_": { mod: true, tagType: "staff", tagName: "Almighty" },
-        "ackleyman": { mod: true, tagType: "orange", tagName: "Ack" }
+        //Devs
+        "gamingninjashq": { mod: true, tagType: "broadcaster", nickname: " " },
+        //Supporters
+		"ur_ad0pted": { mod: true, tagType: "broadcaster", nickname: " " },
+		"helllishdeeds": { mod: true, tagType: "broadcaster", nickname: " " },
     };
 };
   
@@ -648,7 +587,7 @@ bttv.settings = {
                         }
                     }
                 }
-                bttv.notify("BetterTTV imported "+count+" settings, and will now refresh in a few seconds.");
+                bttv.notify("OpieOPTTV imported "+count+" settings, and will now refresh in a few seconds.");
                 setTimeout(function() {
                     window.location.reload();
                 }, 3000);
@@ -703,11 +642,6 @@ bttv.settings = {
             }
         });
 
-        /*var plea = ' \
-            <div class="option"> \
-                <img src="http://cdn.betterttv.net/emotes/batkappa.png" style="margin: -5px 0px;"/> "I\'ve been spending <b>days</b> fixing BetterTTV. Maybe people will <a href="https://streamdonations.net/c/night" target="_blank">contribute</a> for the trouble." \
-            </div> \
-        ';*/
 
         $('#bttvSettings .options-list').append(featureRequests);
         //$('#bttvSettings .options-list h2.option').before(plea);
@@ -742,14 +676,14 @@ bttv.settings = {
     },
     popup: function() {
         var settingsUrl = 'http://'+window.location.host+'/settings?bttvSettings=true';
-        window.open(settingsUrl, 'BetterTTV Settings', 'width=800,height=500,top=500,left=800,scrollbars=no,location=no,directories=no,status=no,menubar=no,toolbar=no,resizable=no');
+        window.open(settingsUrl, 'OpieOPTTV Settings', 'width=800,height=500,top=500,left=800,scrollbars=no,location=no,directories=no,status=no,menubar=no,toolbar=no,resizable=no');
     },
     prefix: "bttv_",
     save: function(setting, value) {
         if(/\?bttvSettings=true/.test(window.location)) {
             window.opener.postMessage('bttv_setting '+setting+' '+value, 'http://'+window.location.host);
         } else {
-            if(window.ga) ga('send', 'event', 'BTTV', 'Change Setting: '+setting+'='+value);
+            if(window.ga) ga('send', 'event', 'OpieOPTTV', 'Change Setting: '+setting+'='+value);
             if(/\?bttvDashboard=true/.test(window.location)) window.parent.postMessage('bttv_setting '+setting+' '+value, 'http://'+window.location.host);
             vars.settings[setting].value = value;
             bttv.storage.put(bttv.settings.prefix+setting, value);
@@ -1021,7 +955,7 @@ bttv.chat = {
             });
         }
 
-        // Load BTTV emotes if not loaded
+        // Load OpieOPTTV emotes if not loaded
         overrideEmotes();
         handleTwitchChatEmotesScript();
 
@@ -1278,7 +1212,7 @@ bttv.chat = {
         }
 
         $('.ember-chat .chat-messages .chat-line').remove();
-        chat.helpers.serverMessage('<center><small>BetterTTV v' + bttv.info.version + ' Loaded.</small></center>');
+        chat.helpers.serverMessage('<center><small>OpieOPTTV V2 Loaded.</small></center>');
         chat.helpers.serverMessage('Welcome to '+chat.helpers.lookupDisplayName(bttv.getChannel())+'\'s chat room!');
 
         // Poll mods list in case +o fails.
@@ -1660,7 +1594,7 @@ bttv.chat = {
             var helpers = chat.helpers;
 
             if(!user) {
-                helpers.serverMessage("Chat was cleared by a moderator (Prevented by BetterTTV)");
+                helpers.serverMessage("Chat was cleared by a moderator (Prevented by BetterTTV Like a BAWS)");
             } else {
                 if($('.chat-line[data-sender="' + user.replace(/%/g, '_').replace(/[<>,]/g, '') + '"]').length === 0) return;
                 if(bttv.settings.get("hideDeletedMessages") === true) {
@@ -1940,7 +1874,7 @@ bttv.chat = {
                 if(userData.tagName) data.bttvTagName = userData.tagName;
                 if(userData.color && data.style !== 'action') data.color = userData.color;
                 if(userData.nickname) data.bttvDisplayName = userData.nickname;
-                data.bttvTagDesc = "Grandfathered BetterTTV Swag Tag";
+                data.bttvTagDesc = "OpieOPTTV Swag Tag";
             }
 
             var badges = bttv.chat.helpers.getBadges(data.from);
@@ -2003,7 +1937,7 @@ bttv.chat = {
                 bttvBadges.push({
                     type: userData.tagType,
                     name: "&#8203;",
-                    description: userData.dev ? 'BetterTTV Developer':'BetterTTV '+userData.team+' Team'
+                    description: userData.dev ? 'OpieOPTTV Swag Tag':'OpieOPTTV '+userData.team+' Team'
                 });
             }
 
@@ -2469,7 +2403,7 @@ var main = function () {
         createSettings();
         bttv.settings.load();
 
-        debug.log("BTTV v" + bttv.info.versionString());
+        debug.log("OpieOPTTV v" + bttv.info.versionString());
         debug.log("CALL init " + document.URL);
 
         clearClutter();
@@ -2537,7 +2471,7 @@ checkJquery();
 });
 
 require.register("settings-list", function(exports, require, module){
-  /** BTTV :
+  /** OpieOPTTV :
  * cssBlueButtons
  * handleTwitchChatEmotesScript
  */
@@ -2573,7 +2507,7 @@ module.exports = [
         storageKey: 'antiPrefix'
     },
     {
-        name: 'BetterTTV Chat',
+        name: 'OpieOPTTV Chat',
         description: 'A tiny chat bar for personal messaging friends (BETA)',
         default: false,
         storageKey: 'bttvChat',
@@ -2586,8 +2520,8 @@ module.exports = [
         }
     },
     {
-        name: 'BetterTTV Emotes',
-        description: 'BetterTTV adds extra cool emotes for you to use',
+        name: 'OpieOPTTV Emotes',
+        description: 'OpieOPTTV adds extra cool emotes for you to use',
         default: true,
         storageKey: 'bttvEmotes',
         toggle: function() {
@@ -2596,7 +2530,7 @@ module.exports = [
     },
     {
         name: 'Blue Buttons',
-        description: 'BetterTTV replaces Twitch\'s purple with blue by default',
+        description: 'OpieOPTTV replaces Twitch\'s purple with blue by default',
         default: true,
         storageKey: 'showBlueButtons',
         toggle: function(value) {
@@ -2634,13 +2568,13 @@ module.exports = [
     },
     {
         name: 'Default to Live Channels',
-        description: 'BetterTTV can click on "Live Channels" for you in the Directory when enabled',
+        description: 'OpieOPTTV can click on "Live Channels" for you in the Directory when enabled',
         default: false,
         storageKey: 'showDirectoryLiveTab'
     },
     {
         name: 'Desktop Notifications',
-        description: 'BetterTTV can send you desktop notifications when you are tabbed out of Twitch',
+        description: 'OpieOPTTV can send you desktop notifications when you are tabbed out of Twitch',
         default: false,
         storageKey: 'desktopNotifications',
         toggle: function(value) {
@@ -2652,7 +2586,7 @@ module.exports = [
                                 bttv.settings.save("desktopNotifications", true);
                                 bttv.notify("Desktop notifications are now enabled.");
                             } else {
-                                bttv.notify("You denied BetterTTV permission to send you notifications.");
+                                bttv.notify("You denied OpieOPTTV permission to send you notifications.");
                             }
                         });
                     } else if (Notification.permission === 'granted' || (window.webkitNotifications && webkitNotifications.checkPermission() === 0)) {
@@ -2664,7 +2598,7 @@ module.exports = [
                                 bttv.settings.save("desktopNotifications", true);
                                 bttv.notify("Desktop notifications are now enabled.");
                             } else {
-                                bttv.notify("You denied BetterTTV permission to send you notifications.");
+                                bttv.notify("You denied OpieOPTTV permission to send you notifications.");
                             }
                         });
                     } else {
@@ -2697,7 +2631,7 @@ module.exports = [
     },
     {
         name: 'Featured Channels',
-        description: 'The left sidebar is too cluttered, so BetterTTV removes featured channels by default',
+        description: 'The left sidebar is too cluttered, so OpieOPTTV removes featured channels by default',
         default: false,
         storageKey: 'showFeaturedChannels',
         toggle: function(value) {
@@ -2730,7 +2664,7 @@ module.exports = [
     },
     {
         name: 'JTV Chat Tags',
-        description: 'BetterTTV can replace the chat tags with the ones from JTV',
+        description: 'OpieOPTTV can replace the chat tags with the ones from JTV',
         default: false,
         storageKey: 'showJTVTags'
     },
@@ -2742,7 +2676,7 @@ module.exports = [
     },
     {
         name: 'Other Messages Alert',
-        description: 'BetterTTV can alert you when you receive a message to your "Other" messages folder',
+        description: 'OpieOPTTV can alert you when you receive a message to your "Other" messages folder',
         default: false,
         storageKey: 'alertOtherMessages',
         toggle: function() {
@@ -2763,7 +2697,7 @@ module.exports = [
     },
     {
         name: 'Robot Emoticons',
-        description: 'BetterTTV replaces the robot emoticons with the old JTV monkey faces by default',
+        description: 'OpieOPTTV replaces the robot emoticons with the old JTV monkey faces by default',
         default: false,
         storageKey: 'showDefaultEmotes',
         toggle: function() {
@@ -2949,9 +2883,9 @@ module.exports = function () {
             $.getJSON("//chat.betterttv.net/login.php?onsite=true&user="+vars.userData.login+"&callback=?", function(d) {
 
                 if(d.status === true) {
-                    debug.log("Logged into BTTV Chat");
+                    debug.log("Logged into OpieOPTTV Chat");
                 } else {
-                    debug.log("Not logged into BTTV Chat");
+                    debug.log("Not logged into OpieOPTTV Chat");
                 }
 
                 var chatDJSInject = document.createElement("script");
@@ -3023,7 +2957,7 @@ module.exports = function () {
         $("#large_nav #logo").append($watermark);
     }
 
-    // Adds BTTV Settings Icon to Left Sidebar
+    // Adds OpieOPTTV Settings Icon to Left Sidebar
     $(".column .content #you").append('<a class="bttvSettingsIcon" href="#"></a>');
     $(".bttvSettingsIcon").click(function(e){
         e.preventDefault();
@@ -3031,7 +2965,7 @@ module.exports = function () {
         $('#bttvSettingsPanel').show("slow");
     })
 
-    // Import Global BTTV CSS Changes
+    // Import Global OpieOPTTV CSS Changes
     var globalCSSInject = document.createElement("link");
     globalCSSInject.setAttribute("href", "//cdn.betterttv.net/style/stylesheets/betterttv.css?"+bttv.info.versionString());
     globalCSSInject.setAttribute("type", "text/css");
@@ -3049,7 +2983,7 @@ module.exports = function () {
     $("body#chat").css("overflow-y", "hidden");
     $('#chat_loading_spinner').attr('src', "data:image/gif;base64,R0lGODlhFgAWAPMGANfX1wAAADc3N1tbW6Ojo39/f2tra8fHx9nZ2RsbG+np6SwsLEtLS4eHh7q6ugAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hoiQ3JlYXRlZCB3aXRoIENoaW1wbHkuY29tIgAh+QQJCgAGACwAAAAAFgAWAAAEbNCESY29OEvBRdDgFXReGI7dZ2oop65YWypIjSgGbSOW/CGAIICnEAIOPdLPSDQiNykDUNgUPn1SZs6ZjE6D1eBVmaVurV1XGXwWp0vfYfv4XpqLaKg6HqbrZzs4OjZ1MBlYhiJkiYWMfy+GEQAh+QQJCgAGACwAAAAAFgAWAAAEctDIKYO9NKe9lwlCKAQZlQzo4IEiWUpnuorjC6fqR7tvjM4tgwJBJN5kuqACwGQef8kQadkEPHMsqbBqNfiwu231CtRSm+Ro7ez04sprbjobH7uR9Kn8Ds2L0XxgSkVGgXA8JV+HNoZqiBocCYuMJX4vEQAh+QQJCgAAACwAAAAAFgAWAAAEcxDISWu4uNLEOwhCKASSGA5AMqxD8pkkIBR0gaqsC4rxXN+s1otXqtlSQR2s+EPmhqGeEfjcRZk06kpJlE2dW+gIe8SFrWNv0yxES9dJ8TsLbi/VdDb3ii/H3WRadl0+eX93hX5ViCaCe2kaKR0ccpGWlREAIfkECQoAAQAsAAAAABYAFgAABHUwyEmrvTisxHlmQigw2mAOiWSsaxMwRVyQy4mqRE64sEzbqYBBt3vJZqVTcKjjHX9KXNPoS5qWRGe1FhVmqTHoVZrThq0377R35o7VZTDSnWbG2XMguYgX1799aFhrT4J7ZnldLC1yfkEXICKOGRcbHY+UlBEAIfkECQoAAQAsAAAAABYAFgAABHIwyEmrvThrOoQXTFYYpFEEQ6EWgkS8rxMUMHGmaxsQR3/INNhtxXL5frPaMGf0AZUooo7nTAqjzN3xecWpplvra/lt9rhjbFlbDaa9RfZZbFPHqXN3HQ5uQ/lmSHpkdzVoe1IiJSZ2OhsTHR8hj5SVFREAIfkECQoAAQAsAAAAABYAFgAABGowyEmrvTjrzWczIJg5REk4QWMShoQAMKAExGEfRLq2QQzPtVtOZeL5ZLQbTleUHIHK4c7pgwqZJWM1eSVmqTGrTdrsbYNjLAv846a9a3PYvYRr5+j6NPDCR9U8FyQmKHYdHiEih4uMjRQRACH5BAkKAAEALAAAAAAWABYAAARkMMhJq7046807d0QYSkhZKoFiIqhzvAchATSNIjWABC4sBznALbfrvX7BYa0Ii81yShrT96xFdbwmEhrALbNUINcrBR+rti7R7BRb1V9jOwkvy38rVmrV0nokICI/f4SFhocSEQAh+QQJCgABACwAAAAAFgAWAAAEWjDISau9OOvNu7dIGCqBIiKkeUoH4AIk8gJIOR/sHM+1cuev3av3C7SCAdnQ9sIZdUke0+U8uoQuYhN4jS592ydSmZ0CqlAyzYweS8FUyQlVOqXmn7x+z+9bIgA7");
 
-    // Run Beta Chat After BTTV CSS
+    // Run Beta Chat After OpieOPTTV CSS
     betaChat();
 };
   
@@ -3065,7 +2999,7 @@ var removeElement = require('element').remove;
 module.exports = function() {
     if(!$('.ember-chat .chat-settings').length || $('.ember-chat .chat-settings .bttvChatSettings').length) return;
 
-    debug.log("Loading BetterTTV Chat Settings");
+    debug.log("Loading OpieOPTTV Chat Settings");
 
     $('.ember-chat .chat-settings .clear-chat').remove();
 
@@ -4465,7 +4399,7 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 ;var locals_for_with = (locals || {});(function ($, window, bttv) {
-buf.push("<div class=\"chat-menu-header\">BetterTTV</div><div class=\"chat-menu-content\">");
+buf.push("<div class=\"chat-menu-header\">OpieOPTTV</div><div class=\"chat-menu-content\">");
 if ( $("body[data-page=\"ember#chat\"]").length)
 {
 buf.push("<p><a href=\"#\" class=\"g18_gear-00000080 blackChatLink\">Black Chat (Chroma Key)</a></p>");
@@ -4483,7 +4417,7 @@ buf.push("Flip Dashboard");
 }
 buf.push("</a></p>");
 }
-buf.push("<p><a href=\"#\" class=\"g18_gear-00000080 setBlacklistKeywords\">Set Blacklist Keywords</a></p><p><a href=\"#\" class=\"g18_gear-00000080 setHighlightKeywords\">Set Highlight Keywords</a></p><p><a href=\"#\" class=\"g18_gear-00000080 setScrollbackAmount\">Set Scrollback Amount</a></p><p><a href=\"#\" class=\"g18_trash-00000080 clearChat\">Clear My Chat</a></p><p><a href=\"#\" style=\"display: block;margin-top: 8px;text-align: center;\" class=\"button-simple dark openSettings\">BetterTTV Settings</a></p></div>");}("$" in locals_for_with?locals_for_with.$:typeof $!=="undefined"?$:undefined,"window" in locals_for_with?locals_for_with.window:typeof window!=="undefined"?window:undefined,"bttv" in locals_for_with?locals_for_with.bttv:typeof bttv!=="undefined"?bttv:undefined));;return buf.join("");
+buf.push("<p><a href=\"#\" class=\"g18_gear-00000080 setBlacklistKeywords\">Set Blacklist Keywords</a></p><p><a href=\"#\" class=\"g18_gear-00000080 setHighlightKeywords\">Set Highlight Keywords</a></p><p><a href=\"#\" class=\"g18_gear-00000080 setScrollbackAmount\">Set Scrollback Amount</a></p><p><a href=\"#\" class=\"g18_trash-00000080 clearChat\">Clear My Chat</a></p><p><a href=\"#\" style=\"display: block;margin-top: 8px;text-align: center;\" class=\"button-simple dark openSettings\">OpieOPTTV Settings</a></p></div>");}("$" in locals_for_with?locals_for_with.$:typeof $!=="undefined"?$:undefined,"window" in locals_for_with?locals_for_with.window:typeof window!=="undefined"?window:undefined,"bttv" in locals_for_with?locals_for_with.bttv:typeof bttv!=="undefined"?bttv:undefined));;return buf.join("");
 };module.exports=template;
   
 });
@@ -4541,10 +4475,10 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 ;var locals_for_with = (locals || {});(function (bttv) {
-buf.push("<div id=\"header\"><span id=\"logo\"><img height=\"45px\" src=\"//cdn.betterttv.net/style/logos/settings_logo.png\"/></span><ul class=\"nav\"><li><a href=\"#bttvAbout\">About</a></li><li class=\"active\"><a href=\"#bttvSettings\">Settings</a></li><li><a href=\"#bttvChangelog\">Changelog</a></li><li><a href=\"#bttvPrivacy\">Privacy Policy</a></li><li><a href=\"#bttvBackup\">Backup/Import</a></li></ul><span id=\"close\">&times;</span></div><div id=\"bttvSettings\" style=\"height:425px;\" class=\"scroll scroll-dark\"><div class=\"tse-content options-list\"><h2 class=\"option\">Here you can manage the various BetterTTV options. Click On or Off to toggle settings.</h2></div></div><div id=\"bttvAbout\" style=\"display:none;\"><div class=\"aboutHalf\"><img src=\"//cdn.betterttv.net/style/logos/mascot.png\" class=\"bttvAboutIcon\"/><h1>BetterTTV v " + (jade.escape((jade_interp = bttv.info.versionString()) == null ? '' : jade_interp)) + "</h1><h2>from your friends at <a href=\"http://www.nightdev.com\" target=\"_blank\">NightDev</a></h2><br/></div><div class=\"aboutHalf\"><h1 style=\"margin-top: 100px;\">Think this addon is awesome?</h1><br/><br/><h2><a target=\"_blank\" href=\"https://chrome.google.com/webstore/detail/ajopnjidmegmdimjlfnijceegpefgped\">Drop a Review on the Chrome Webstore</a></h2><br/><h2>or maybe</h2><br/><h2><a target=\"_blank\" href=\"http://streamdonations.net/c/night\">Support the Developer</a></h2><br/></div></div><div id=\"bttvPrivacy\" style=\"display:none;height:425px;\" class=\"scroll scroll-dark\"><div class=\"tse-content\"></div></div><div id=\"bttvChangelog\" style=\"display:none;height:425px;\" class=\"scroll scroll-dark\"><div class=\"tse-content\"></div></div><div id=\"bttvBackup\" style=\"display:none;height:425px;padding:25px;\"><h1 style=\"padding-bottom:15px;\">Backup Settings</h1><button id=\"bttvBackupButton\" class=\"primary_button\"><span>Download</span></button><h1 style=\"padding-top:25px;padding-bottom:15px;\">Import Settings</h1><input id=\"bttvImportInput\" type=\"file\" style=\"height: 25px;width: 250px;\"/></div><div id=\"footer\"><span>BetterTTV &copy; <a href=\"http://www.nightdev.com\" target=\"_blank\">NightDev</a> 2014</span><span style=\"float:right;\"><a href=\"http://www.nightdev.com/contact\" target=\"_blank\">Get Support</a> | <a href=\"http://bugs.nightdev.com/projects/betterttv/issues/new?tracker_id=1\" target=\"_blank\">Report a Bug</a> | <a href=\"http://streamdonations.net/c/night\" target=\"_blank\">Support the Developer</a></span></div>");}("bttv" in locals_for_with?locals_for_with.bttv:typeof bttv!=="undefined"?bttv:undefined));;return buf.join("");
+buf.push("<div id=\"header\"><span id=\"logo\"><img height=\"45px\" src=\"//cdn.betterttv.net/style/logos/settings_logo.png\"/></span><ul class=\"nav\"><li><a href=\"#bttvAbout\">About</a></li><li class=\"active\"><a href=\"#bttvSettings\">Settings</a></li><li><a href=\"#bttvChangelog\">Changelog</a></li><li><a href=\"#bttvPrivacy\">Privacy Policy</a></li><li><a href=\"#bttvBackup\">Backup/Import</a></li></ul><span id=\"close\">&times;</span></div><div id=\"bttvSettings\" style=\"height:425px;\" class=\"scroll scroll-dark\"><div class=\"tse-content options-list\"><h2 class=\"option\">Here you can manage the various OpieOPTTV options. Click On or Off to toggle settings.</h2></div></div><div id=\"bttvAbout\" style=\"display:none;\"><div class=\"aboutHalf\"><img src=\"//cdn.betterttv.net/style/logos/mascot.png\" class=\"bttvAboutIcon\"/><h1>OpieOPTTV v " + (jade.escape((jade_interp = bttv.info.versionString()) == null ? '' : jade_interp)) + "</h1><h2>from your friends at <a href=\"http://www.nightdev.com\" target=\"_blank\">NightDev</a></h2><br/></div><div class=\"aboutHalf\"><h1 style=\"margin-top: 100px;\">Think this addon is awesome?</h1><br/><br/><h2><a target=\"_blank\" href=\"https://chrome.google.com/webstore/detail/ajopnjidmegmdimjlfnijceegpefgped\">Drop a Review on the Chrome Webstore</a></h2><br/><h2>or maybe</h2><br/><h2><a target=\"_blank\" href=\"http://streamdonations.net/c/night\">Support the Developer</a></h2><br/></div></div><div id=\"bttvPrivacy\" style=\"display:none;height:425px;\" class=\"scroll scroll-dark\"><div class=\"tse-content\"></div></div><div id=\"bttvChangelog\" style=\"display:none;height:425px;\" class=\"scroll scroll-dark\"><div class=\"tse-content\"></div></div><div id=\"bttvBackup\" style=\"display:none;height:425px;padding:25px;\"><h1 style=\"padding-bottom:15px;\">Backup Settings</h1><button id=\"bttvBackupButton\" class=\"primary_button\"><span>Download</span></button><h1 style=\"padding-top:25px;padding-bottom:15px;\">Import Settings</h1><input id=\"bttvImportInput\" type=\"file\" style=\"height: 25px;width: 250px;\"/></div><div id=\"footer\"><span>OpieOPTTV &copy; <a href=\"http://www.nightdev.com\" target=\"_blank\">NightDev</a> 2014</span><span style=\"float:right;\"><a href=\"http://www.nightdev.com/contact\" target=\"_blank\">Get Support</a> | <a href=\"http://bugs.nightdev.com/projects/betterttv/issues/new?tracker_id=1\" target=\"_blank\">Report a Bug</a> | <a href=\"http://streamdonations.net/c/night\" target=\"_blank\">Support the Developer</a></span></div>");}("bttv" in locals_for_with?locals_for_with.bttv:typeof bttv!=="undefined"?bttv:undefined));;return buf.join("");
 };module.exports=template;
   
 });
 
 require('main'); 
-}(window.BetterTTV = window.BetterTTV || {}));
+}(window.OpieOPTTV = window.OpieOPTTV || {}));
